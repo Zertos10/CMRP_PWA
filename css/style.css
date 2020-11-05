@@ -1,0 +1,29 @@
+body {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+nav
+{
+   
+}
+#article {
+    margin-top:58px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items:baseline;
+    
+}
+img
+{
+    align-items:center;
+   height:200px;
+   width:200px;
+}
+#json {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
