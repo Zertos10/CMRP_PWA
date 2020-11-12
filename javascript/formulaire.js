@@ -1,6 +1,10 @@
 document.getElementById("corp").onload = function () { Localisation() };
 
 
+var phone_verif = document.getElementById("phone_verif").value;
+console.log(phone_verif);
+
+
 
 
 function Localisation() {
@@ -13,10 +17,16 @@ function Localisation() {
 		
 	}
 }
+var lat = 0;
+var lng = 0;
 function callback(position) {
-	var lat = position.coords.latitude;
-	var lng = position.coords.longitude;
+	lat = position.coords.latitude;
+	lng = position.coords.longitude;
 	console.log(lat, lng);
+	var loc = lat + ',' + lng;
+
+
+
 	// Do stuff
 }
 function erreur(error) {
@@ -46,12 +56,11 @@ function alternative() {
 	}).done(function (data) {
 		if (data.success) {
 			var lat = data.data.lat;
-			var lat = data.data.lng;
+			var lng = data.data.lng;
 			console.log(lat, lng);
 			// Do stuff
+
 		}
 	});
 }
-
-
 

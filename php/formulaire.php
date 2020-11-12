@@ -9,7 +9,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta name="author" content="">
     <title>Formulaire</title>
-    <link href="css/formulaire.css" rel="stylesheet">
 </head>
 <body id="corp">
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
@@ -49,13 +48,30 @@
     
     </form>
     <?php
+    session_start();
  
+   if(empty( $_SESSION['phone_verif'])) 
+   {
+  session_write_close();
+   }
+   else {
+   echo session_name();
+	$phone_verif = $_SESSION['phone_verif'];
+    echo  $_SESSION['phone_verif'];
+       ?>"<input type='hidden' id='phone_verif' value='<?php echo $phone_verif; ?>'/>"
+       <?php
+   
+
+}
+   
+
+
 
 
     ?>
 
     </article>
     
-    <script src="javascript/formulaire.js"></script>
+    <script src="../javascript/formulaire.js"></script>
 </body>
 </html> 
