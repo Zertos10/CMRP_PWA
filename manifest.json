@@ -6,8 +6,7 @@
   "display": "standalone",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-
-    "prefer_related_applications": false,
+  "prefer_related_applications": false,
  
 
   "icons": [
