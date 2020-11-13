@@ -1,14 +1,13 @@
 ﻿<html lang="fr">
 <head>
     <link rel="manifest" href="../manifest.json">
-
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="application-name" content="CMRP_Art">
     <meta name="apple-mobile-web-app-title" content="CMRP_Art">
     <meta name="msapplication-starturl" content="/php/index.php">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta charset="utf-8">
+<meta http-equiv= »Content-Type » content= »text/html; charset=utf-8″ />
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -22,10 +21,10 @@
 </head>
 <body >
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
-        <a class="navbar-brand" href="#">Logo</a>
+        <h4 class="navbar-brand" href="#">Site essai PWA</h4>
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="javascript:void(0)">Contact</a>
+                <a class="nav-link disabled" href="javascript:void(0)">Accueil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="formulaire.php">Formulaire</a>
@@ -35,6 +34,7 @@
 
         </ul>
     </nav>
+    <br><br>
   <button id="install_button" hidden>Install</button>
     <div id="article" class="container-fluid">
 

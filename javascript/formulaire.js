@@ -1,10 +1,33 @@
 document.getElementById("corp").onload = function () { Localisation() };
 
 
-var phone_verif = document.getElementById("phone_verif").value;
+var phone_verif = document.getElementById("phone_valid").value;
+var email_verif = document.getElementById("email_valid").value;
+var name_verif = document.getElementById("name_valid").value;
+var send_succes = document.getElementById("send_succes").value;
 console.log(phone_verif);
+if (typeof (phone_verif) != "undefined" && typeof (email_verif) != "undefined"  && typeof (name_verif) != "undefined" && typeof (send_succes) != "undefined")
+{
+	console.log("Tout va bien");
+	retourRequete();
+}
+function retourRequete()
+{
+	if(phone_verif == 1) {
+		$('#phone_form').css('background-color', '#941417');
+	}
+	if (email_verif == 1) {
+		$('#email_form').css('background-color', '#941417');
+	}
+	if (name_verif == 1) {
+		$('#name_form').css('background-color', '#941417');
 
+	}
+	if (send_succes == true) {
+		alert("Formulaire envoié avec succée");
+	}
 
+}
 
 
 function Localisation() {
@@ -26,6 +49,8 @@ function callback(position) {
 	var loc = lat + ',' + lng;
 
 
+	$("#localisation").val(loc);
+	
 
 	// Do stuff
 }
@@ -44,23 +69,4 @@ function erreur(error) {
 	// Function alternative
 	alternative();
 };
-function alternative() {
-	$.ajax({
-		// pensez à définir le chemin vers admin-ajax.php…
-		// … en front via localize_script()…
-		// … au moment de l'enqueue de votre script
-		url: adminajax,
-		data: {
-			action: get_user_coords
-		}
-	}).done(function (data) {
-		if (data.success) {
-			var lat = data.data.lat;
-			var lng = data.data.lng;
-			console.log(lat, lng);
-			// Do stuff
-
-		}
-	});
-}
 
